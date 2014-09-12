@@ -1,6 +1,6 @@
 <?php
 
-require_once('../../../libs/Nix/loader.php');
+require_once('../../src/Nix/loader.php');
 
 use Nix\Caching\Cache,
 	Nix\Debugging\Debugger;
