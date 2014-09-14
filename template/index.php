@@ -7,7 +7,7 @@ use Nix\Debugging\Debugger,
 	Nix\Templating\Template;
 
 Debugger::init(true);
-Debugger::setLogPath(__DIR__.'/temp/');
+Debugger::setLogPath(__DIR__.'/../temp/');
 
 $template = new Template('template.tpl');
 $template->variable = 'obsah a <tag> s .';

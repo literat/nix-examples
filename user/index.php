@@ -10,7 +10,7 @@ use Nix\Debugging\Debugger,
 	Nix\Permissions\Identity;
 
 Debugger::init(true);
-Debugger::setLogPath(__DIR__.'/temp/');
+Debugger::setLogPath(__DIR__.'/../temp/');
 
 class UserHandler implements IUserHandler
 {

@@ -11,7 +11,7 @@ use Nix\Templating\Template,
 	Nix\Templating\Helpers\HtmlHelper,
 	Nix\Http\Http;
 
-Debugger::setLogPath(dirname(__FILE__));
+Debugger::setLogPath(__DIR__.'/../temp/');
 Debugger::init(TRUE);
 
 /**

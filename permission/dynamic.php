@@ -12,7 +12,7 @@ use Nix\Debugging\Debugger,
 	Nix\Permissions\Resource;
 
 Debugger::init(true);
-Debugger::setLogPath(__DIR__.'/temp/');
+Debugger::setLogPath(__DIR__.'/../temp/');
 
 class PostsResource extends Resource
 {

@@ -7,7 +7,7 @@ use Nix\Debugging\Debugger,
 	Nix\Sessions\Session;
 
 Debugger::init(true);
-Debugger::setLogPath(__DIR__.'/temp/');
+Debugger::setLogPath(__DIR__.'/../temp/');
 
 $ns = Session::getNamespace('test');
 if (!$ns->exists('var1')) {

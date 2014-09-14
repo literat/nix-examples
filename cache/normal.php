@@ -5,8 +5,8 @@ require_once('../../src/Nix/loader.php');
 use Nix\Caching\Cache,
 	Nix\Debugging\Debugger;
 
-Debugger::setLogPath(dirname(__FILE__));
 Debugger::init(true);
+Debugger::setLogPath(__DIR__.'/../temp/');
 
 $cache = new Cache();
 //$cache->delete('var');

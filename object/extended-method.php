@@ -5,7 +5,7 @@ require_once('../../src/Nix/loader.php');
 use Nix\Object,
 	Nix\Debugging\Debugger;
 
-Debugger::setLogPath(dirname(__FILE__));
+Debugger::setLogPath(__DIR__.'/../temp/');
 Debugger::init(true);
 
 class Text extends Object
