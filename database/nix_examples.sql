@@ -43,6 +43,7 @@ DROP TABLE IF EXISTS `artists`;
 CREATE TABLE `artists` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
+  `partner_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
 
@@ -51,3 +52,13 @@ CREATE TABLE `artists` (
 -- ----------------------------
 INSERT INTO `artists` VALUES ('1', 'Cally McDown');
 INSERT INTO `artists` VALUES ('2', 'Peter File');
+
+-- ----------------------------
+-- Table structure for `partners`
+-- ----------------------------
+DROP TABLE IF EXISTS `partners`;
+CREATE TABLE `partners` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
