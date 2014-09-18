@@ -10,6 +10,7 @@ use Nix\Debugging\Debugger,
 	Nix\Database\Table;
 
 Debugger::init(true);
+Debugger::setLogPath(__DIR__.'/../temp/');
 
 Db::connect(array('database' => 'nix_examples'));
 
@@ -20,7 +21,7 @@ $form = $albums->getForm();
 $form->renderer->javascript = false;
 
 if($form->isSubmit() && $form->isValid()) {
-	Debugger::dump($form->data);
+	dump($form->data);
 }
 	
 echo $form->renderer->render();

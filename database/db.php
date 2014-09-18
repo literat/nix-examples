@@ -7,6 +7,7 @@ use Nix\Debugging\Debugger,
 	Nix\Database\Db;
 
 Debugger::init(true);
+Debugger::setLogPath(__DIR__.'/../temp/');
 
 Db::connect(array('database' => 'nix_examples'));
 
@@ -17,16 +18,16 @@ $a = array(
 	'tsadst' => true
 );
 
-Debugger::dump(db::getConnection()->escapeArray($a));
+dump(db::getConnection()->escapeArray($a));
 
 echo '<h2>fetch field</h2>';
-Debugger::dump(Db::fetchField("select [name] from [albums] order by RAND() limit 1"));
+dump(Db::fetchField("select [name] from [albums] order by RAND() limit 1"));
 
 echo '<h2>fetch all</h2>';
-Debugger::dump(Db::fetchAll("select * from [albums] order by [name] limit 3"));
+dump(Db::fetchAll("select * from [albums] order by [name] limit 3"));
 
 echo '<h2>fetch pairs</h2>';
-Debugger::dump(Db::fetchPairs("select [id], [name] from [albums] order by RAND() limit 10"));
+dump(Db::fetchPairs("select [id], [name] from [albums] order by RAND() limit 10"));
 
 echo '<h2>fetch pairs</h2>';
-Debugger::dump(Db::fetchPairs("select [name] from [albums] order by RAND() limit 10"));
+dump(Db::fetchPairs("select [name] from [albums] order by RAND() limit 10"));

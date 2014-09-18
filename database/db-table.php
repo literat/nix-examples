@@ -8,6 +8,7 @@ use Nix\Debugging\Debugger,
 	Nix\Database\Table;
 
 Debugger::init(true);
+Debugger::setLogPath(__DIR__.'/../temp/');
 
 Db::connect(array('database' => 'nix_examples'));
 
@@ -15,13 +16,13 @@ $class = Table::init('Albums');
 
 echo "<h2>reading get</h2>";
 $person = new $class(3);
-Debugger::dump($person->get());
+dump($person->get());
 
 
 echo "<h2>reading getby</h2>";
 $album = new $class;
 $album->setName('Test album - ' . date('d.m.Y'));
-Debugger::dump($album->getBy('name'));
+dump($album->getBy('name'));
 
 
 echo "<h2>writing</h2>";

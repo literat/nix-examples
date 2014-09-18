@@ -8,6 +8,8 @@ use Nix\Debugging\Debugger,
 	Nix\Config\Configurator;
 
 Debugger::init(true);
+Debugger::setLogPath(__DIR__.'/../temp/');
+
 Configurator::write('db.log', true);
 
 Db::connect(array('database' => 'nix_examples'));
