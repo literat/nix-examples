@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>{block #title}{$title} - Haefko templates example{/block}</title>
+    <title>{block #title}{$title} - Nix templates example{/block}</title>
 </head>
 <body style="background:orange">
 

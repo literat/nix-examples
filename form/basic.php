@@ -10,7 +10,7 @@ use Nix\Debugging\Debugger,
 	Nix\Forms\Form;
 
 Debugger::init(true);
-Debugger::setLogPath(__DIR__.'/temp/');
+Debugger::setLogPath(__DIR__.'/../temp/');
 
 Configurator::write('core.debug', 2);
 
